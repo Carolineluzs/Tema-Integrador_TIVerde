@@ -50,3 +50,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 300); 
         }
     });
+
+    dicasLista.querySelectorAll('.dica-item').forEach(item => {
+        
+        item.parentNode.addEventListener('mouseenter', (e) => {
+            const coresAleatorias = ['#FFD54F', '#81D4FA', '#A7E295']; 
+            const cor = coresAleatorias[Math.floor(Math.random() * coresAleatorias.length)];
+            e.currentTarget.style.backgroundColor = cor;
+            e.currentTarget.style.transform = 'scale(1.02)';
+        });
+
+        
+        item.parentNode.addEventListener('mouseleave', (e) => {
+            e.currentTarget.style.backgroundColor = 'var(--verde-claro)';
+            e.currentTarget.style.transform = 'scale(1)';
+        });
+    });
+
+});
