@@ -24,4 +24,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }, 500); 
     }
-}    
+
+    btnAnimar.addEventListener('click', animarEcoBit);
+
+    
+    setTimeout(animarEcoBit, 500); 
+
+    
+    document.addEventListener('mousemove', (e) => {
+        const olhoEsquerdo = ecobitMascote.querySelector('.olho.left::after');
+        const olhoDireito = ecobitMascote.querySelector('.olho.right::after');
+
+      
+
+        
+        const rect = ecobitMascote.getBoundingClientRect();
+        const estaPerto = e.clientX > rect.left - 100 && e.clientX < rect.right + 100 &&
+                          e.clientY > rect.top - 100 && e.clientY < rect.bottom + 100;
+
+        if (estaPerto && !ecobitMascote.classList.contains('shake')) {
+            ecobitMascote.classList.add('shake');
+        } else if (!estaPerto && ecobitMascote.classList.contains('shake')) {
+            setTimeout(() => {
+                ecobitMascote.classList.remove('shake');
+            }, 300); 
+        }
+    });
