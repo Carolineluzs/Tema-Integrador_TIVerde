@@ -170,3 +170,24 @@ main {
 
 }
 
+#dicas-lista {
+    list-style: none;
+    padding-left: 0;
+}
+
+#dicas-lista li {
+    background-color: var(--verde-claro);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    border-left: 10px solid var(--verde-escuro);
+    transition: background-color 0.3s;
+}
+
+#dicas-lista ol, li:hover {
+    background-color: #4299b3;
+    color: var(--branco);
+    font-weight: bold;
+}
+
