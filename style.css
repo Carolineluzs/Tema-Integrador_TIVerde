@@ -201,3 +201,115 @@ footer {
 }
 
 
+.mascote-container {
+    position: relative;
+    width: 200px;
+    height: 250px;
+}
+
+.ecobit {
+    position: absolute;
+    bottom: 0;
+    transform: scale(0.8);
+    transition: transform 0.5s ease;
+}
+
+.cabeça {
+    width: 120px;
+    height: 100px;
+    background-color: var(--verde-escuro);
+    border-radius: 20px 20px 0 0;
+    margin: 0 auto;
+    position: relative;
+    border: 5px solid var(--branco);
+    z-index: 2;
+}
+
+.olho {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: var(--branco);
+    border-radius: 50%;
+    top: 30px;
+    border: 3px solid #333;
+}
+
+.olho.left { left: 15px; }
+.olho.right { right: 15px; }
+
+
+.olho::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+    top: 10px;
+    left: 5px;
+}
+
+.antena {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 30px;
+    background-color: var(--marrom-claro);
+    border-radius: 5px 5px 0 0;
+}
+
+.antena::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -7px;
+    width: 20px;
+    height: 10px;
+    background-color: var(--amarelo-sol);
+    border-radius: 50%;
+}
+
+.corpo {
+    width: 150px;
+    height: 100px;
+    background-color: var(--verde-claro);
+    border-radius: 0 0 20px 20px;
+    margin: -5px auto 0;
+    position: relative;
+    border: 5px solid var(--branco);
+    border-top: none;
+    z-index: 1;
+}
+
+.tela {
+    width: 60px;
+    height: 60px;
+    background-color: var(--verde-escuro);
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    border: 3px solid var(--branco);
+}
+
+.pés {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+.pé {
+    width: 40px;
+    height: 15px;
+    background-color: var(--marrom-claro);
+    border-radius: 0 0 5px 5px;
+}
+
